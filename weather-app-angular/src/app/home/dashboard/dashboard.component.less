@@ -1,0 +1,216 @@
+@import '../../../assets/variables.less';
+
+.dashboard-main {
+  padding: 12px 0;
+  //max-width: 960px;
+}
+
+.search-div {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.card {
+  border-radius: 4px;
+  border: 1px solid;
+  background-color: @card-background;
+  width: 330px;
+  //height: auto;
+  max-height: 260px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card-container .card:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.alert {
+  padding: 12px;
+  background-color: #f44336;
+  color: white;
+  margin: 8px 0;
+}
+
+// red error border
+.input-control.ng-touched.ng-invalid {
+  -webkit-box-shadow: 0 0 1px 1px @error-font-color;
+  -moz-box-shadow: 0 0 1px 1px @error-font-color;
+  box-shadow: 0 0 2px 1px @error-font-color;
+  .border(@error-font-color);
+}
+
+.border(@color) {
+  border: 1px solid @color;
+}
+
+// on error
+.error-div {
+  color: #fff;
+  padding: 12px 18px;
+  margin-bottom: 40px;
+  border-radius: 1px;
+  background-color: @error-background-color;
+}
+
+// on success
+.success-div {
+  color: @success-font-color;
+  padding: 12px 18px;
+  //margin: 40px 0px;
+  margin-bottom: 40px;
+  border-radius: 1px;
+  background-color: @success-background-color;
+}
+
+// info
+.notify-div {
+  color: @info-font-color;
+  padding: 12px 18px;
+  margin-bottom: 40px;
+  border-radius: 1px;
+  background-color: @info-background-color;
+}
+
+form button {
+  padding: 11px;
+  background-color: @card-background;
+  &:hover {
+    background-color: @color-third;
+    cursor: pointer;
+  }
+}
+
+form input {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  .border(@form-border);
+  border-color: @input-hover-border-color;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+
+  &:hover {
+    background-color: @color-fourth;
+  }
+
+  &:focus {
+    -webkit-box-shadow: 0 0 2px 1px @primary-color;
+    -moz-box-shadow: 0 0 2px 1px @primary-color;
+    box-shadow: 0 0 2px 1px @primary-color;
+    border: 1px solid @primary-color;
+    background: @input-focus-background;
+  }
+}
+
+.radio-group {
+  background: @card-background;
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  //font-size: 18px;
+  //width: 50%;
+}
+
+.p-b {
+  padding-bottom: 12px;
+}
+.p-r {
+  padding-right: 20px;
+}
+.radio-btn {
+  display: inline;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+
+.forecast-margin {
+  padding: 8px 6px;
+  width: 100%;
+}
+
+div.inline {
+  float: left;
+}
+
+.clearBoth {
+  clear: both;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  height: 20px;
+  width: 20px;
+  margin: 0px auto;
+  -webkit-animation: rotation .8s infinite linear;
+  -moz-animation: rotation .8s infinite linear;
+  -o-animation: rotation .8s infinite linear;
+  animation: rotation .8s infinite linear;
+  border-left: 6px solid @color-secondary;
+  border-right: 6px solid @color-secondary;
+  border-bottom: 6px solid @color-secondary;
+  border-top: 6px solid @primary-color;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg);
+  }
+
+  to {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}

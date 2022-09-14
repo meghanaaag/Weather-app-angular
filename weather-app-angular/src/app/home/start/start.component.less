@@ -1,0 +1,46 @@
+@import '../../../assets/variables.less';
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: @header-background;
+  color: black;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 26px;
+}
+span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.content {
+  display: flex;
+  margin: 70px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  position       : fixed;
+  top            : 50%;
+  left           : 50%;
+  min-width      : 100vw;
+  min-height     : 100vh;
+  width          : auto;
+  height         : auto;
+  z-index        : -100;
+  transform      : translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition     : 1s opacity;
+}
